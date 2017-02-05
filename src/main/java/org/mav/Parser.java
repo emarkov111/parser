@@ -9,9 +9,6 @@ import org.jsoup.select.Elements;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- *
- */
 public class Parser {
     private Document doc = null;
     private FileWriter file = null;
