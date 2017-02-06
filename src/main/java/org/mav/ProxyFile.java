@@ -12,20 +12,20 @@ import java.io.IOException;
 /**
  *
  */
-public class Parser {
+public class ProxyFile {
     private Document doc = null;
     private FileWriter file = null;
 
-    public Parser(String url) {
+    public ProxyFile(String url) {
         try {
             doc = Jsoup.connect(url).get();
-            file = new FileWriter("/home/andrew/developer/projects/java/parser/proxy.json");
+            file = new FileWriter("/home/mandrew/developer/projects/java/parser/proxy.json");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public String getTitle() {
+    private String getTitle() {
         String title = doc.title();
         return title;
     }
