@@ -1,43 +1,18 @@
-Array
-(
-    [0] => Array
-        (
-            [url] => http://rus.auto24.ee/kasutatud/nimekiri.php?bn=&a=101102&aj=&b=42&f1=2010&f2=2016&g1=1000&g2=90000&ae=2&af=200&ag=0&ag=1&otsi=поиск
-            [type] => GET
-            [contentRedirect] =>
-            [contentRedirectType] => GET
-        )
+[
+    {
+        "url": "http://rus.auto24.ee/kasutatud/nimekiri.php?bn=2&a=100&aj=&b=4&ae=2&af=200&ag=0&ag=1&otsi=поиск&ak=0",
+        "method": "GET"
+    },
+    {
+        "url": "http://rus.auto24.ee",
+        "method": "POST"
+    },
+    {
+        "url": "http://andrew",
+        "method": ""
+    },
+    {
+        "url": "http://andrew"
+    }
 
-    [1] => Array
-        (
-            [url] => http://ru.autoplius.lt/objavlenija/b-u-avtomobili?make_id_list=73&engine_capacity_from=&engine_capacity_to=&power_from=&power_to=&kilometrage_from=&kilometrage_to=&has_damaged_id=&color_id=&condition_type_id=&make_date_from=2010&make_date_to=2016&sell_price_from=1000&sell_price_to=90000&fuel_id=&gearbox_id=&body_type_id=&wheel_drive_id=&number_of_seats_id=&number_of_doors_id=&fk_place_countries_id=&steering_wheel_id=&origin_country_id=&older_not=&qt=&order_by=2&order_direction=ASC&make_id[73]=0
-            [type] => GET
-            [contentRedirect] =>
-            [contentRedirectType] => GET
-        )
-
-    [2] => Array
-        (
-            [url] => http://rst.ua/oldcars/?task=newresults&make[]=107&price[]=1000&price[]=90000&year[]=2010&year[]=2016&condition=0&engine[]=0&engine[]=0&fuel=0&gear=0&drive=0&results=1&saled=0¬cust=&sort=1&city=0&from=sform
-            [type] => GET
-            [contentRedirect] =>
-            [contentRedirectType] => GET
-        )
-
-    [3] => Array
-        (
-            [url] => http://www.automobile.it/search@attr_category=cars&attr_m_condition_i=&attr_m_make_model=385875968&txt_title=&attr_price_min=1000&attr_price_max=90000&attr_m_year_min=2010&attr_m_year_max=2016&attr_m_km_min=&attr_m_km_max=&area_id=&radius=&attr_damaged=&attr_m_number_of_previous_owners_i_min=&attr_m_power_i_min=&attr_m_power_i_max=&attr_m_number_of_seats_i=
-            [type] => POST
-            [contentRedirect] => 1
-            [contentRedirectType] => GET
-        )
-
-    [4] => Array
-        (
-            [url] => http://auto.lv/ru/search-result/?q=Land+Rover
-            [type] => GET
-            [contentRedirect] =>
-            [contentRedirectType] =>
-        )
-
-)
+]
