@@ -12,9 +12,9 @@ public class App {
 
         Urls url = new Urls();
 
-//        ProxyFile proxyFile = new ProxyFile("https://www.us-proxy.org");
-//        proxyFile.getProxyFile();
-        RusAuto24EE rusAuto24EE = new RusAuto24EE(url.getUrl(), brouserAgent.getUserAgent());
-//        rusAuto24EE.getDataSite();
+        ProxyFile proxyFile = new ProxyFile("https://www.us-proxy.org");
+        String proxy = proxyFile.getProxy();
+        RusAuto24EE rusAuto24EE = new RusAuto24EE(url.getUrl(), brouserAgent.getUserAgent(), proxy);
+        rusAuto24EE.getDataSite();
     }
 }

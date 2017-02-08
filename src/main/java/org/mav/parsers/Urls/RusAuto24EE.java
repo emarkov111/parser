@@ -20,14 +20,23 @@ import java.util.ArrayList;
 * */
 public class RusAuto24EE {
     private Document doc = null;
+    private Connection.Method method;
+    private String host;
+    private String port;
 
-    public RusAuto24EE(String url, String userAgent) {
+    public RusAuto24EE(String url, String userAgent, String proxy) {
         try {
-            doc = Jsoup.connect(url).method(Connection.Method.POST).userAgent(userAgent).get();
+            method = Connection.Method.GET;
+            host = proxy.substring(0, proxy.indexOf(':') - 1);
+            port = proxy.substring(proxy.indexOf(':') + 1);
+            System.setProperty("http.proxyHost", host);
+            System.setProperty("http.proxyPort", port);
+            doc = Jsoup.connect(url).method(method).userAgent(userAgent).get();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     public void getDataSite() {
         Element table = doc.select("table").get(2); //select the first table.
         Elements rows = table.select("tr");
@@ -39,7 +48,7 @@ public class RusAuto24EE {
 //            System.out.println(row);
 /*picture*/
             Elements picture = row.getElementsByClass("small-image");
-            for(Element p : picture) {
+            for (Element p : picture) {
                 pictureAdres.add(p.select("img").attr("src"));
 //                System.out.println(picture);
             }
@@ -51,14 +60,14 @@ public class RusAuto24EE {
 //            System.out.println(price.text());
 /*name*/
             Elements nameCar = row.getElementsByClass("make_and_model");
-            for (Element nC: nameCar) {
-                Elements linkNC =nC.getElementsByAttribute("href");
+            for (Element nC : nameCar) {
+                Elements linkNC = nC.getElementsByAttribute("href");
 //                System.out.println(linkNC);
 //                System.out.println(linkNC.text());
             }
 /*select marka car http: id b = e.attr("value")*/
             Elements link = doc.select("#searchParam-cmm-1-make >option");
-            for(Element e: link) {
+            for (Element e : link) {
 //                System.out.println(e.attr("value") + " " + e.text());
             }
         }
